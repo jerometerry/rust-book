@@ -23,6 +23,6 @@ impl Drop for Firework {
 
 #[test]
 fn test_multi_drop() {
-    let firecracker = Firework { strenght: 1 };
+    let firecracker = Firework { strength: 1 };
     let tnt = Firework { strength: 100 };
 } // tnt is dropped before firecracker. Drop is LIFO
