@@ -1,4 +1,8 @@
 extern crate rand;
+extern crate rust_book;
+
+use rust_book::phrases::english::{greetings as en_greetings, farewells as en_farewells};
+use rust_book::phrases::japanese::{greetings as ja_greetings, farewells as ja_farewells};
 
 use std::io;
 use std::cmp::Ordering;
@@ -33,5 +37,14 @@ fn main() {
             }
         }
     }
+
+    print_phrases();
+}
+
+fn print_phrases() {
+    println!("Hello in English: {}", en_greetings::hello());
+    println!("Goodbye in English: {}", en_farewells::goodbye());
+    println!("Hello in Japanese: {}", ja_greetings::hello());
+    println!("Goodbye in Japanese: {}", ja_farewells::goodbye());
 }
 
