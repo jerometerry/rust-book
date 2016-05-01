@@ -36,6 +36,21 @@ fn test_using_iflet() {
 }
 
 #[test]
+fn test_whilelet_hardway() {
+    let mut v = vec![1, 3, 5, 7, 11];
+    loop {
+        match v.pop() {
+            Some(x) => println!("{}", x),
+            None => break,
+        }
+    }
+}
+
+#[test]
 fn test_whilelet() {
     let mut v = vec![1, 3, 5, 7, 11];
+    while let Some(x) = v.pop() {
+        println!("{}", x);
+    }
 }
+
